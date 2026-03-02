@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engineering Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- 3D model viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="name">Your Name</div>
+        <div class="role">Mechanical / Aerospace / Robotics</div>
+      </div>
+
+      <nav class="links" aria-label="Primary">
+        <a class="link" href="#projects">Projects</a>
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#resume">Resume</a>
+        <a class="link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- SECTION 1: Hero -->
+    <section class="hero" id="top">
+      <div class="hero-card">
+        <div class="kicker">Engineering Portfolio</div>
+        <h1>I design and build engineering systems.</h1>
+        <p class="sub">
+          Systems, controls, and prototypes from concept to validated hardware.
+          Browse recent work and dive into detailed write-ups.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Projects →</a>
+          <a class="btn" href="#resume">Download Resume</a>
+          <a class="btn" href="#contact">Email Me</a>
+        </div>
+      </div>
+
+      <div class="model-card" aria-label="3D model viewer">
+        <div class="model-label">Featured 3D Model</div>
+
+        <model-viewer
+            src="assets/engine.glb"
+            alt="Engine MK10 3D model"
+            camera-controls
+            auto-rotate
+            rotation-per-second="20deg"
+            shadow-intensity="1"
+            exposure="1.2"
+            environment-image="studio"
+            tone-mapping="aces"
+            interaction-prompt="none"
+            camera-orbit="45deg 75deg 2.5m">
+        </model-viewer>
+
+        <div class="model-caption">
+          <span class="cap-strong">Tip:</span> drag to orbit • scroll to zoom
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator" aria-label="Section divider"></div>
+
+    <!-- SECTION 2: Projects -->
+    <section class="section" id="projects">
+      <div class="section-title">
+        <h2>Recent Work</h2>
+        <p>Filter by project style.</p>
+      </div>
+
+      <div class="filters" id="filters" aria-label="Project filters"></div>
+
+      <div class="grid" id="grid" aria-label="Project grid"></div>
+
+      <div class="below-grid">
+        <a class="link-cta" href="#">View all projects →</a>
+      </div>
+    </section>
+
+    <!-- SECTION 3: About / Skills -->
+    <section class="section two" id="about">
+      <div class="panel">
+        <h3>About</h3>
+        <p>
+          Short bio goes here. Keep it concrete: what you build, how you validate it,
+          and what tools you use.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Skills</h3>
+        <p>Keep it scannable.</p>
+        <div class="chips">
+          <span class="chip">CAD</span>
+          <span class="chip">FEA</span>
+          <span class="chip">Python</span>
+          <span class="chip">MATLAB</span>
+          <span class="chip">Controls</span>
+          <span class="chip">Test</span>
+          <span class="chip">Manufacturing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Contact -->
+    <section class="section" id="contact">
+      <div class="contact">
+        <div class="left">
+          <div class="top">Let’s build something.</div>
+          <div class="sub2">your.email@domain.com • GitHub • LinkedIn</div>
+        </div>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:your.email@domain.com">Email →</a>
+          <a class="btn" href="#">GitHub</a>
+          <a class="btn" href="#">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
